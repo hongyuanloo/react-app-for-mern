@@ -18,7 +18,8 @@ export function UpdateComedians({ show }) {
   // if assigned still same, no update, else updateOne.
   // then go back to showsList Page.
   useEffect(() => {
-    fetch("http://localhost:3001/comedians/")
+    // fetch("http://localhost:3001/comedians/")
+    fetch("https://zany-teal-caterpillar-tam.cyclic.app/comedians")
       .then((response) => {
         return response.json();
       })

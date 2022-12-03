@@ -7,7 +7,9 @@ export function ShowsList({ setShow }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3001/shows")
+    //
+    // fetch("http://localhost:3001/shows")
+    fetch("https://zany-teal-caterpillar-tam.cyclic.app/shows")
       .then((response) => {
         return response.json();
       })
