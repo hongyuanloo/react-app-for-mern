@@ -124,7 +124,7 @@ export function UpdateComedians({ show }) {
     });
     console.log("performersIds: ", performersIds);
     console.log("showIds: ", show._id);
-    console.log("url: ", `http://localhost:3001/shows/${show._id}`);
+    // console.log("url: ", `http://localhost:3001/shows/${show._id}`);
     // get array of ids from performers.
 
     const requestOptions = {
@@ -135,7 +135,11 @@ export function UpdateComedians({ show }) {
       body: JSON.stringify({ performers: performersIds }),
     };
 
-    fetch(`http://localhost:3001/shows/${show._id}`, requestOptions)
+    // fetch(`http://localhost:3001/shows/${show._id}`, requestOptions)
+    fetch(
+      `https://zany-teal-caterpillar-tam.cyclic.app/shows/${show._id}`,
+      requestOptions
+    )
       .then((response) => {
         return response.json();
       })
